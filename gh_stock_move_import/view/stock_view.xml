@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_stock_location_supplier">
+            <field name="name">stock.location.supplier.view</field>
+   			<field name="model">stock.location</field>
+            <field name="type">form</field>
+			<field name="inherit_id" ref="stock.view_location_form"/>
+			<field name="arch" type="xml">
+            <field name="valuation_out_account_id" position="after">
+                <newline/>
+                <separator string="Location External Ref" colspan="2"/>
+                <field name="xls_supplier_location"/>
+            </field>
+            </field>
+        </record>
+    </data>
+</openerp>
