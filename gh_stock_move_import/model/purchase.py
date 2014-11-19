@@ -39,4 +39,3 @@ class PurchaseOrderLine(orm.Model):
             name = partner_id + '-' + order_id + '/' + line
             res.append((record['id'], name))
         return res
-

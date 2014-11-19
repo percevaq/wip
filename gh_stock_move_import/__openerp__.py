@@ -28,8 +28,8 @@
     "website": "http://www.serviciosbaeza.com",
     "category": "Wharehouse management",
     "description": """
-    Añade la posibilidad de importar movimientos de almacen
-    ======================================================
+Añade la posibilidad de importar movimientos de almacen
+======================================================
     Mediante una hoja excel con la siguiente configuracion:
     * Columna A: Fecha del movimiento.
     * Columna B: Origen del movimiento.

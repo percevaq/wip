@@ -38,6 +38,6 @@ class StockLocation(orm.Model):
     }
     _sql_constraints = [
         ('ref_uniq',
-         'unique(supplier_location, company_id)',
+         'unique(xls_supplier_location, company_id)',
          'External Reference must be unique per Company!'),
     ]

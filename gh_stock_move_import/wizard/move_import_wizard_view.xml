@@ -54,7 +54,6 @@
                     </group>
                     <group colspan="8" col="8">
                         <separator string="" colspan="8"/>
-                        <label colspan="6" width="220"/>
                         <button special="cancel" string="_Close" icon="gtk-cancel" states="step1"/>
                         <button name="import_excel" states="step1" string="_Import" type="object" icon="gtk-go-forward"/>
                         <button name="back_step1" states="step2" string="_Back" type="object" icon="gtk-ok"/>

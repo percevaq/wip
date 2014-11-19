@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-##############################################################################
+# #############################################################################
 #
 #    OpenERP, Open Source Management Solution
 #    Copyright (c) 2014 Pedro Manuel Baeza Romero & Joaquin Gutierrez Pedrosa
@@ -65,7 +65,7 @@ class MoveImportWizard(orm.TransientModel):
                 location_supplier_id = location_obj.search(
                     cr, uid, [('xls_supplier_location', '=', int(row[2]))])
                 destination = location_supplier_id and \
-                              location_supplier_id[0] or False
+                    location_supplier_id[0] or False
                 # Buscamos el producto a traves de la referencia
                 product_ids = product_obj.search(
                     cr, uid, [('default_code', '=', row[3])])
@@ -77,7 +77,7 @@ class MoveImportWizard(orm.TransientModel):
                                   ('state', '=', 'approved'),
                                   ('location_id', '=', destination)])
                     for order in purchase_obj.browse(cr, uid, order_ids,
-                                                 context=context):
+                                                     context=context):
                         for line in order.order_line:
                             if line.product_id.id == product_ids[0]:
                                 order_line_ids.append(line.id)
@@ -149,7 +149,7 @@ class MoveImportWizard(orm.TransientModel):
             for picking in picking_obj.read(cr, uid, picking_ids):
                 if picking and picking['state'] in 'draft,assigned':
                     picking_obj.unlink(cr, uid, picking_ids, context=context)
-             # Buscar las lineas mismo pedido y ubicacion origen
+                    # Buscar las lineas mismo pedido y ubicacion origen
             line_ids = line_obj.search(
                 cr, uid, [('order_id', '=', purchase_order_id),
                           ('wizard_id', '=', wizard.id)])
@@ -261,5 +261,3 @@ class MoveImportWizardLine(orm.TransientModel):
                                      required=True, ondelete='cascade',
                                      select=True, readonly=True),
     }
-
-
