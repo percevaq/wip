@@ -53,4 +53,3 @@ Añade la posibilidad de importar movimientos de almacen
     "active": False,
     "installable": True
 }
-

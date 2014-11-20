@@ -22,4 +22,3 @@
 
 
 from . import move_import_wizard
-
